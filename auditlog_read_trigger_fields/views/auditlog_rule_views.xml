@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="auditlog_rule_form_view" model="ir.ui.view">
+        <field name="name">auditlog.rule.form</field>
+        <field name="model">auditlog.rule</field>
+        <field name="inherit_id" ref="auditlog.view_auditlog_rule_form"/>
+        <field name="arch" type="xml">
+           <sheet position="inside">
+                <group name="read_trigger_fields" string="Read trigger fields">
+                    <field name="read_trigger_field_ids" nolabel="1">
+                        <tree>
+                            <field name="name"/>
+                            <field name="field_description"/>
+                            <field name="ttype"/>
+                        </tree>
+                    </field>
+                </group>
+           </sheet>
+        </field>
+    </record>
+</odoo>
